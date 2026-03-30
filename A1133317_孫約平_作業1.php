@@ -17,16 +17,16 @@
 		<a name="basic">
 		<ol>
 		<h2><li>基本資料</h2>
-		<form action="" method="">
+		<form action="success.php" method="POST">
 		姓名:<input type="text" placeholder="請輸入姓名" name="nName" required><br>
-		身分證字號:<input type="password" placeholder="例如：A123456789" name="nIdentity" required><br>
+		身分證字號:<input type="password" placeholder="例如：A123456789" name="nIdentity" value="a" required><br>
 		性別:
-		男<input type="radio" name="mGender" value="m">
-		女<input type="radio" name="mGender" value="f"><br>
+		男<input type="radio" name="mGender" value="male">
+		女<input type="radio" name="mGender" value="female" checked><br>
 		生日：<input type="date" name="mBirth" value="birth"><br>
 		<input type="color" name="mColor" value="color">
 		<input type="time" name="mTime" value="time"><br>
-		居住縣市:<select name="nCity" multiple>
+		居住縣市:<select name="nCity">
 		<option value="Taipei">台北</option>
 		<option value="Taichung">台中</option>
 		<option value="Kaosiung">高雄</option>
@@ -35,14 +35,14 @@
 		<a name="activity">
 		<h2><li>選擇活動</h2>
 		參加活動:
-		河流泛舟<input type="checkbox" name="mInterest" value="rafting">
-		營火晚會<input type="checkbox" name="mInterest" value="party">
-		手工DIY(額外收費)<input type="checkbox" name="mInterest" value="diy" checked><br>
+		河流泛舟<input type="checkbox" name="mInterest[]" value="rafting">
+		營火晚會<input type="checkbox" name="mInterest[]" value="party">
+		手工DIY(額外收費)<input type="checkbox" name="mInterest[]" value="diy" checked><br>
 		傾向程度(露營or住宿)：<input type="range" name="mRange" value="star"><br>
 		住宿房型(雙人或四人房)：<input type="number" name="mRoom" value="room"><br>
 		<p>
 		<u>房型價目表</u><table border="1">
-		<tr><th>旅館</th><th>雙人房</th><th>四人房</th></tr>
+		<tr bgcolor=lightgreen ><th>旅館</th><th>雙人房</th><th>四人房</th></tr>
 		<tr><td>茵茵</td><td>3000</td><td>5000</td></tr>
 		<tr><td>森森</td><td>3200</td><td>5500</td></tr>
 		<tr><td>孔埠</td><td>3600</td><td>6000</td></tr>
@@ -51,7 +51,7 @@
 		<h2><li>填寫聯絡資料</h2><p>
 		<font size=2 color=red >*重要</font><br>
 		電話:<input type="text" placeholder="例如：0123456789" name="nPhone" required><br>
-		Email:<input type="email" name="mEmail" value="@mail.nuk.edu.tw" required><br>
+		Email:<input type="email" name="mEmail" value="A@mail.nuk.edu.tw" required><br>
 		其他疑問：<br>
 		<textarea name="comment" rows="10" cols="30">
 我還想知道...
